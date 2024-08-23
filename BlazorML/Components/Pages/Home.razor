@@ -119,7 +119,7 @@
     private List<IBrowserFile> loadedFiles = new();
     private string imagePath = "";
     private string result = "kein Foto";
-
+    float percentage;
     protected override Task OnAfterRenderAsync(bool firstRender)
     {
         return base.OnAfterRenderAsync(firstRender);
@@ -156,7 +156,34 @@
 
                 MLModel.ModelOutput output = MLModel.Predict(input);
 
-                result = $"Die Maschine ist: {output.PredictedLabel}";
+                
+
+               
+                var scores = output.Score;
+                float sum = 0;
+                for (int i = 0; i < scores.Length; i++)
+                {
+                    sum += scores[i];
+                }
+
+                float maxScore = float.MinValue;
+                int predictedLabelIndex = -1;
+
+                for (int i = 0; i < scores.Length; i++)
+                {
+                    percentage = (scores[i] / sum) * 100; // Normalisierung und Umwandlung in Prozent
+                    Console.WriteLine($"Klasse {i}: {percentage:F2}%");
+
+                    // Finden des Indexes der höchsten Punktzahl
+                    if (scores[i] > maxScore)
+                    {
+                        maxScore = scores[i];
+                        predictedLabelIndex = i;
+                    }
+                }
+                float maxPercentage = maxScore * 100; // In Prozent umwandeln
+                string formattedMaxPercentage = maxPercentage.ToString("F2"); // Formatieren auf 2 Dezimalstellen
+                result = $"Die Maschine ist: {output.PredictedLabel} - {formattedMaxPercentage}%";
 
                 loadedFiles.Add(file);
                 await InvokeAsync(StateHasChanged);
