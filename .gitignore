@@ -5,3 +5,6 @@ BlazorML.Client/obj
 Foto_WebApi1/obj
 MLModel_WebApi1/bin
 MLModel_WebApi1/obj
+MLFoto/.vs
+MLFoto/MLFoto/MLFoto.Client/obj
+MLFoto/MLFoto/MLFoto/obj

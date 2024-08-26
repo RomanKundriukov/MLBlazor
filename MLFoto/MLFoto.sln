@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35209.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLFoto", "MLFoto\MLFoto\MLFoto.csproj", "{5D2BF523-15E1-49E0-9A12-48A2836881C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLFoto.Client", "MLFoto\MLFoto.Client\MLFoto.Client.csproj", "{F5BF65A7-B75B-4E94-ACCD-C9BCD5AE7BA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D2BF523-15E1-49E0-9A12-48A2836881C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2BF523-15E1-49E0-9A12-48A2836881C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2BF523-15E1-49E0-9A12-48A2836881C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2BF523-15E1-49E0-9A12-48A2836881C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BF65A7-B75B-4E94-ACCD-C9BCD5AE7BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BF65A7-B75B-4E94-ACCD-C9BCD5AE7BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BF65A7-B75B-4E94-ACCD-C9BCD5AE7BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BF65A7-B75B-4E94-ACCD-C9BCD5AE7BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {908ED04F-1AAE-4714-B96A-9D63737E020F}
+	EndGlobalSection
+EndGlobal
